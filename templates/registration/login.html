@@ -3,11 +3,15 @@
 
 {% block page_title %}Login{% endblock  %}
 
+{% block label %}
+ Book Store
+{% endblock %}
+
 {% block content %}
     <h1 class="mt-3">Login</h1>
     <form  action="" method="post">
+        {% csrf_token %}
         <div class="form-row mt-3">
-            {% csrf_token %}
             <div class="form-row align-items-center">
                 {{ form|crispy }}
             </div>
@@ -20,3 +24,6 @@
     <a class="btn btn-primary mt-3" href="{% url 'signup' %}">Sign Up</a><br>
     <a class="btn btn-danger mt-4" href="{% url 'password_reset' %}">Forgot Password?</a>
 {% endblock  %}
+
+
+
