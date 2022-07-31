@@ -1,0 +1,20 @@
+{% extends '_base.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block page_title %}حذف کتاب {{book.title}} {% endblock  %}
+
+
+{% block label %}
+ Book Store
+{% endblock %}
+
+{% block content %}
+        <form action="" method="post">
+            {% csrf_token %}
+            <h1> حذف کتاب {{ book.title }}</h1>
+            <p> آیااز حذف کردن کتاب {{ book.title }} مطمئن هستید؟</p>
+            <input type="submit" class="btn btn-danger" value="بله حذف شود">
+
+        </form>
+{% endblock  %}

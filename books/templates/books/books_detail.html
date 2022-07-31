@@ -15,6 +15,9 @@
         <a href="{% url 'book_update_view' book.id %}">
                 <button class="btn btn-info" type="button">ویرایش</button>
         </a>
+        <a href="{% url 'book_delete_view' book.id %}">
+                <button class="btn btn-danger" type="button">حذف</button>
+        </a>
         <br>
         <a href="{% url 'book_list_view' %}">بازگشت به صفحه کتاب</a><br>
         <a href="{% url 'home' %}">خانه</a>
