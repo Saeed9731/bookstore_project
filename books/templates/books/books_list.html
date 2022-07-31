@@ -12,9 +12,9 @@
 
     {% for book in books %}
         <a href="{{ book.get_absolute_url }}">
-            <h1>{{ book.title }}</h1>
+            <h1>{{ book.title | capfirst }}</h1>
         </a>
-        <p>{{ book.description }}</p>
+        <p>{{ book.description | truncatewords:10}}</p>
         <p>{{ book.price }}</p>
 
         <br>
