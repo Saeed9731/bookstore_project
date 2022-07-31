@@ -15,8 +15,11 @@
             <h1>{{ book.title }}</h1>
         </a>
         <p>{{ book.description }}</p>
+        <p>{{ book.price }}</p>
+
         <br>
 
     {% endfor %}
-        <a href="{% url 'book_create_view' %}">اضافه کردن کتاب جدید</a>
+        <a href="{% url 'book_create_view' %}">اضافه کردن کتاب جدید</a><br>
+        <a href="{% url 'home' %}">خانه</a>
 {% endblock  %}

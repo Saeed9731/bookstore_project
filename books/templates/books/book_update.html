@@ -2,7 +2,7 @@
 {% load crispy_forms_tags %}
 
 
-{% block page_title %}ایجاد کتاب {% endblock  %}
+{% block page_title %}ویرایش کتاب {{book.title}} {% endblock  %}
 
 
 {% block label %}
@@ -15,7 +15,7 @@
                 {{ form|crispy }}
                 <br>
                 <button class="btn btn-success mt-3" type="submit">
-                 ایجاد
+                 تغییر
             </button>
         </form>
 {% endblock  %}
