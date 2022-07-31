@@ -1,4 +1,5 @@
 {% extends '_base.html' %}
+{% load crispy_forms_tags %}
 
 
 {% block page_title %}لیست کتاب ها {% endblock  %}
@@ -15,7 +16,7 @@
         </a>
         <p>{{ book.description }}</p>
         <br>
-        
-    {% endfor %}
 
+    {% endfor %}
+        <a href="{% url 'book_create_view' %}">اضافه کردن کتاب جدید</a>
 {% endblock  %}
