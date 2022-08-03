@@ -7,7 +7,7 @@
 
 {% block content %}
     <div class="container mt-4">
-        <div class="row flex-row-reverse justify-cont ent-md-center">
+        <div class="row flex-row-reverse justify-content-md-center">
             {% for book in books %}
                 <div class="card m-2" style="max-width: 45%">
                     <div class="row g-0 h-100" dir="rtl">
@@ -23,6 +23,7 @@
                                     </a>
                                     <p class="card-text pt-3">{{ book.description | truncatewords:30 }}</p>
                                     <p class="text-muted">نویسنده: {{ book.author }}</p>
+<!--                                    <p>{{ user.username }}</p>-->
                                 </div>
                             </div>
                         </div>

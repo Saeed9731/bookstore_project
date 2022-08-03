@@ -1,17 +1,43 @@
 {% extends '_base.html' %}
+{% load static %}
+
+{% block styles %}
+     <link rel="stylesheet" href="{% static 'home_page/css/styles.css' %}">
+{% endblock  %}
 
 {% block page_title %}Home{% endblock  %}
 
-{% block label %}
- Book Store
-{% endblock %}
-{% block content %}
-    <h1>Hello world</h1>
-    {% if user.is_authenticated %}
-        <p>welcome {{ user.username }} | <a href=" {% url 'logout' %}">Log Out </a> </p> 
-    {% else %}
-        <a href=" {% url 'login' %}">login</a> | <a href=" {% url 'signup' %}">Sign Up </a>
-    {% endif %}
-       <br> <a href=" {% url 'book_list_view' %}">لیست کتاب ها</a>
 
-{% endblock  %}
+{% block content %}
+
+<header class="masthead">
+    <div class="container px-100 px-lg-1 d-flex h-100 align-items-center justify-content-center">
+        <div class="d-flex justify-content-center">
+            <div class="text-center">
+                <h1 class="mx-auto my-0 text-uppercase">Book page</h1>
+                <h2 class="text-white-50 mx-auto mt-2 mb-5">A free, responsive, one page Bootstrap theme created by
+                    Start Bootstrap.</h2>
+                <a class="btn btn-primary" href="{% url 'book_list_view' %}">Get Started</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <!-- Contact-->
+<section class="contact-section bg-black">
+        <div class="social d-flex justify-content-center">
+            <a class="mx-2" href="#!"><i class="fab fa-github"></i></a>
+        </div>
+</section>
+    <!-- Footer-->
+<footer class="footer bg-black small text-center text-white-50">
+        <div class="container px-4 px-lg-5">Copyright &copy; Your Website 2022</div>
+</footer>
+<!--    <h1>Hello world</h1>-->
+<!--    {% if user.is_authenticated %}-->
+<!--    <p>welcome {{ user.username }} | <a href=" {% url 'logout' %}">Log Out </a></p>-->
+<!--    {% else %}-->
+<!--    <a href=" {% url 'login' %}">login</a> | <a href=" {% url 'signup' %}">Sign Up </a>-->
+<!--    {% endif %}-->
+<!--    <br> <a href=" {% url 'book_list_view' %}">لیست کتاب ها</a>-->
+{% endblock %}
