@@ -16,7 +16,7 @@ Book Store
                 <div class="card shadow my-3">
                     <h5 class="card-header bg-success text-light px-5">فرم</h5>
                     <div class="px-5 pt-3 pb-5">
-                        <form method="post" novalidate>
+                        <form method="post" enctype="multipart/form-data" novalidate>
                             {% csrf_token %}
 <!--                            {{ form|crispy }}-->
                             <div class="form-group py-2">
@@ -43,6 +43,11 @@ Book Store
 <!--                                <textarea class="form-control" name="text" rows="8" placeholder=""></textarea>-->
                             </div>
 
+                            <div class="form-group py-2">
+                                <label class="py-1">کاور:</label>
+                                {{ form.cover | as_crispy_field }}
+<!--                                <textarea class="form-control" name="text" rows="8" placeholder=""></textarea>-->
+                            </div>
                             <button type="submit" class="btn btn-success mt-2">ذخیره</button>
                         </form>
                     </div>
